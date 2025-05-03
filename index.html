@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive web page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="clickButton">
+            Click Me!
+        </button>
+
+        <div id="hoverBox" class="box">
+            Hover over me and see the Magic Happen!
+        </div>
+
+        <input type="text" id="keyPressInput" placeholder="Press The Key...">
+
+        <h2>Thomas Sheiby</h2>
+
+        <div id="imageGallery" class="gallery">
+            <img src="https://i.pinimg.com/736x/80/95/0f/80950faad425e35484c4dc7934aff29d.jpg" alt="Image One" class="gallery-item">
+            <img src="https://i.pinimg.com/736x/1d/8a/e5/1d8ae558e8c3ba664b6736c4c01a1a14.jpg" alt="Image Two" class="gallery-item">
+            <img src="https://i.pinimg.com/736x/8f/7f/31/8f7f318e6e0a5fa78b54f944dd092e6d.jpg" alt="Image Three" class="gallery-item">
+        </div>
+
+        <div class="tabs">
+            <button class="tab" id="tab1">Tab One</button>
+            <div id="content" class="tab-content">
+                <h3>Content for Tab One</h3>
+                <p>This is the content for Tab One.</p>
+            </div>
+
+            <button class="tab" id="tab2">Tab Two</button>
+            <div id="content2" class="tab-content">
+                <h3>Content for Tab Two</h3>
+                <p>This is the content for Tab Two.</p>
+        </div>
+
+        <form action="" id="form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="Enter your email">
+
+            <label for="password">Password:</label>
+            <input type="text" id="password" required placeholder="Enter your password">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
