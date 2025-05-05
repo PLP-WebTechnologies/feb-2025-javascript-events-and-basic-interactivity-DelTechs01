@@ -1,5 +1,5 @@
 body {
-    fonte-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     padding: 20px;
     background-color: #f4f4f4;
 }
@@ -40,10 +40,6 @@ button:active {
     transition: background-color 0.3s ease;
 }
 
-.box:hover {
-    background-color: #F0f0f0;
-}
-
 .gallery {
     display: flex;
     justify-content: space-between;
@@ -62,6 +58,7 @@ button:active {
 .gallery-item:hover {
     transform: scale(1.05);
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -73,7 +70,7 @@ h2 {
 }
 
 .tabs {
-    matgin-top: 20px;
+    margin-top: 20px;
 }
 
 .tab {
@@ -109,12 +106,13 @@ label {
     display: block;
 }
 
-input[type="submit"] {
+input[type="submit"], button[type="submit"] {
     background-color: #28a745;
     color: white;
     border: none;
     cursor: pointer;
 }
-input[type="submit"]:hover {
+
+input[type="submit"]:hover, button[type="submit"]:hover {
     background-color: #218838;
 }

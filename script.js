@@ -15,8 +15,8 @@ hoverBox.addEventListener('mouseout', () => {
 });
 
 // 3. Keypress Detection
-const keypressInput = document.getElementById('keypressInput');
-keypressInput.addEventListener('keypress', (event) => {
+const keyPressInput = document.getElementById('keyPressInput');
+keyPressInput.addEventListener('keypress', (event) => {
     console.log(`Key pressed: ${event.key}`);
 });
 
@@ -35,11 +35,15 @@ galleryItems.forEach(item => {
 const tabs = document.querySelectorAll('.tab');
 tabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
-        const contentId = 'content' + e.target.id.slice(-1);
+        const tabId = e.target.id;
+        const contentId = 'content' + tabId.slice(-1);
         const content = document.getElementById(contentId);
-        
-        // Toggle content visibility
-        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+
+        // Show current content
+        content.style.display = 'block';
     });
 });
 
@@ -48,8 +52,7 @@ const form = document.getElementById('form');
 form.addEventListener('submit', (event) => {
     const email = document.getElementById('email');
     const password = document.getElementById('password');
-    
-    // Email validation
+
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailRegex.test(email.value)) {
         alert('Please enter a valid email address.');
